@@ -1,5 +1,5 @@
 package com.github.aleksanderweber.techdrawingmanagement.model.data;
 
-public enum Elements {
+public enum Element {
     CEILING, SUBSTRING, WALL, PILLAR, FOUNDATION
 }

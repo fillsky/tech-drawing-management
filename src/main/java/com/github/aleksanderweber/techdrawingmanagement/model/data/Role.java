@@ -1,4 +1,5 @@
 package com.github.aleksanderweber.techdrawingmanagement.model.data;
 
-public class Role {
+public enum Role {
+    ADMINISTRATOR, MANAGER, USER, ARCHITECT
 }

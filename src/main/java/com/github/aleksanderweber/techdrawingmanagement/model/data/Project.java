@@ -9,7 +9,8 @@ import java.util.Set;
 @NoArgsConstructor@AllArgsConstructor
 @ToString(exclude = "id")
 @Getter @Setter @EqualsAndHashCode (of = "id")
-public class Projects {
+@Table(name = "projects")
+public class Project {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,8 +27,8 @@ public class Projects {
 
     @OneToMany(mappedBy = "drawing")
     private Set<Drawing> drawing;
-    
-    @Column(name =" drawing_count")
+
+    @Column(name ="drawing_count")
     private int drawingCount;
 
 }
