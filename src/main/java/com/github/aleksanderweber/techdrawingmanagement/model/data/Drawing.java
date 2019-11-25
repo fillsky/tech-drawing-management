@@ -21,6 +21,7 @@ public class Drawing {
     private String name;
 
     @ManyToOne
+    @JoinColumn(name = "project_id", nullable = false)
     private Project project;
 
     @Column(nullable = false)
@@ -30,6 +31,7 @@ public class Drawing {
     private int sector;
 
     @Column(nullable = false)
+    @Enumerated(EnumType.ORDINAL)
     private Element element;
 
     @Column(name = "assigned_worker")
@@ -37,5 +39,10 @@ public class Drawing {
 
     @Column
     private DrawingStatus status;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
 
 }

@@ -25,10 +25,13 @@ public class Project {
     @Column(name = "project_manager")
     private String manager;
 
-    @OneToMany(mappedBy = "drawing")
-    private Set<Drawing> drawing;
+    @OneToMany(mappedBy = "project")
+    private Set<Drawing> drawings;
 
     @Column(name ="drawing_count")
     private int drawingCount;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }

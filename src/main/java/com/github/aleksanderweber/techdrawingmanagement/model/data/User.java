@@ -20,9 +20,10 @@ public class User {
     @Column
     private String password;
     @Column
+    @Enumerated(EnumType.ORDINAL)
     private Role role;
-    @OneToMany
+    @OneToMany (mappedBy = "user")
     private Set<Project> projects;
-    @OneToMany
+    @OneToMany (mappedBy = "user")
     private Set<Drawing> drawings;
 }
