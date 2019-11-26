@@ -1,16 +1,28 @@
 package com.github.aleksanderweber.techdrawingmanagement.controllers;
 
+import com.github.aleksanderweber.techdrawingmanagement.model.data.Role;
+import com.github.aleksanderweber.techdrawingmanagement.model.data.User;
+import com.github.aleksanderweber.techdrawingmanagement.model.repositories.UserRepository;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 @Controller
 @RequestMapping
 public class HomePageController {
 
-    @GetMapping("/hello")
-    public String showHomepage() {
+    public HomePageController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
+    private UserRepository userRepository;
+    @GetMapping("/hello")
+    public String showHomepage(Model model) {
+        List<User> users = userRepository.findByRole(Role.USER);
+        model.addAttribute("users", users);
         return "hello";
     }
 }

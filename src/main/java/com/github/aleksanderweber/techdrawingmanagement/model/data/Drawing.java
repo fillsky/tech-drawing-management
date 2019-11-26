@@ -31,7 +31,7 @@ public class Drawing {
     private int sector;
 
     @Column(nullable = false)
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     private Element element;
 
     @Column(name = "assigned_worker")

@@ -1,10 +1,18 @@
 package com.github.aleksanderweber.techdrawingmanagement.model.data;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.util.Set;
 
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(exclude = "id")
+@Getter
+@Setter
+@EqualsAndHashCode (of = "id")
 @Table(name = "users")
 public class User {
 
@@ -20,7 +28,7 @@ public class User {
     @Column
     private String password;
     @Column
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     private Role role;
     @OneToMany (mappedBy = "user")
     private Set<Project> projects;
