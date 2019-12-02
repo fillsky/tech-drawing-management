@@ -19,7 +19,7 @@ public class HomePageController {
     }
 
     private UserRepository userRepository;
-    @GetMapping("/home")
+    @GetMapping("/")
     public String showHomepage(Model model) {
         List<User> users = userRepository.findByRole(Role.USER);
         model.addAttribute("users", users);
