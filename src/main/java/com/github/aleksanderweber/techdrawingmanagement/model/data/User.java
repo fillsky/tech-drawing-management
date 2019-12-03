@@ -12,13 +12,13 @@ import java.util.Set;
 @ToString(exclude = "id")
 @Getter
 @Setter
-@EqualsAndHashCode (of = "id")
+@EqualsAndHashCode (of = {"id","login"})
 @Table(name = "users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")

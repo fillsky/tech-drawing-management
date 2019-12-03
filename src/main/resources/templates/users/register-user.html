@@ -22,26 +22,28 @@
                     <tr class="field">
                         <td class="field-label">First Name</td>
                         <td><input type="text" placeholder="First Name" name="firstName" th:field="*{firstName}"
-                                   class="input">
+                                   class="input" th:required="required">
                         </td>
                     </tr>
                     <tr class="field">
                         <td class="field-label">Last Name</td>
-                        <td><input type="text" placeholder="Last Name" name="lastName" class="input"></td>
+                        <td><input type="text" placeholder="Last Name" name="lastName" th:field="*{lastName}"
+                                   class="input" th:required="required"></td>
                     </tr>
                     <tr class="field">
                         <td class="field-label">Login</td>
-                        <td><input type="text" placeholder="Login" name="login" class="input"></td>
+                        <td><input type="text" placeholder="Login" name="login" class="input" th:field="*{login}"
+                                   th:required="required"></td>
                     </tr>
                     <tr class="field">
                         <td class="field-label">Password</td>
-                        <td><input type="password" placeholder="Password" name="password"
-                                   class="input password-field"></td>
+                        <td><input type="password" placeholder="Password" name="password" th:field="*{password}"
+                                   class="input password-field" th:required="required"></td>
                     </tr>
                     <tr class="field">
                         <td class="field-label">Confirm Password</td>
-                        <td><input type="password" placeholder="Confirm Password" name="confirmPassword"
-                                   class="input color password-field"></td>
+                        <td><input type="password" placeholder="Confirm Password" name="confirmPassword" th:field="*{confPassword}"
+                                   class="input color password-field" th:required="required"></td>
                     </tr>
                     <!-- <tr class=>
                          <td colspan="2"><input type="submit" name="submit"
@@ -50,7 +52,7 @@
                 </table>
                 <div class="field is-grouped">
                     <div class="control">
-                        <button class="button is-link">Submit</button>
+                        <button type="submit" name="submit" class="button is-link">Submit</button>
                     </div>
                     <div class="control">
                         <button class="button is-link is-light">Cancel</button>

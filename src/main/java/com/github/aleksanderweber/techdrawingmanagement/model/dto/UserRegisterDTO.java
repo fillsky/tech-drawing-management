@@ -1,12 +1,26 @@
 package com.github.aleksanderweber.techdrawingmanagement.model.dto;
 
 
+import com.github.aleksanderweber.techdrawingmanagement.model.data.Role;
+import com.github.aleksanderweber.techdrawingmanagement.model.data.User;
+
 public class UserRegisterDTO {
 
     private String firstName;
     private String lastName;
     private String login;
     private String password;
+    private String confPassword;
+
+    public String getConfPassword() {
+        return confPassword;
+    }
+
+    public void setConfPassword(String confPassword) {
+        this.confPassword = confPassword;
+    }
+
+
 
     public String getFirstName() {
         return firstName;
@@ -40,4 +54,7 @@ public class UserRegisterDTO {
         this.password = password;
     }
 
-}
+
+    }
+
+
