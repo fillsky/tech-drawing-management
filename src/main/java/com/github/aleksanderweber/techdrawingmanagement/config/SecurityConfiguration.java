@@ -15,9 +15,20 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/**").permitAll();   // Dodajemy stronę główną, aby mógł wejść na nią każdy
+                .antMatchers("/resources/**", "/**", "/home").permitAll();
+                /*.antMatchers("/users/all").hasAnyRole("MANAGER")
+                .anyRequest().authenticated()
+
+                .and()
+                .formLogin()
+                .loginPage("/login")
+                .permitAll()
+                .and()
+                .logout()
+                .permitAll();*/
 
     }
+
     @Override
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers("/media/**");
