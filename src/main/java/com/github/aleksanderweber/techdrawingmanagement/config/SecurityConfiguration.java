@@ -7,7 +7,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 
-@Configuration
+//@Configuration
 
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
@@ -16,7 +16,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/resources/**", "/**", "/home").permitAll();
-                /*.antMatchers("/users/all").hasAnyRole("MANAGER")
+                /*.antMatchers("/all").hasAnyRole("MANAGER")
                 .anyRequest().authenticated()
 
                 .and()

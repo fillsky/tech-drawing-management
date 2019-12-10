@@ -6,8 +6,8 @@
     <link href="/dist/css/bulma.css" rel="stylesheet" type="text/css">
     <title>Home</title>
 </head>
-<body>
-<div th:insert="fragments/header :: header-no-login"></div>
+<body class="container">
+<div th:insert="fragments/header :: ${#authentication.authenticated}? 'header-login' : 'header-no-login'"></div>
 <footer th:insert="fragments/footer"></footer>
 </body>
 </html>
