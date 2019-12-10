@@ -38,8 +38,9 @@
         <p class="level-item"><a>Drawings</a></p>
         <p class="level-item"><a>Projects</a></p>
         <p class="level-item"><a th:href="@{/users}">Users</a></p>
+        <p class="level-item is-small">Logged as:</p>
         <a class="level-item has-text-weight-semibold" th:text="${#authentication.name}" ></a>
-        <p class="level-item"><a href="/logout" class="button is-success">Log out</a></p>
+        <p class="level-item"><a href="/logout" class="button is-warning">Log out</a></p>
     </div>
 </nav>
 </body>
