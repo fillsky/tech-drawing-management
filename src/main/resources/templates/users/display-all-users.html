@@ -1,12 +1,45 @@
 
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="/dist/css/bulma.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body class="container">
+<div th:insert="fragments/header :: ${#authentication.authenticated}? 'header-login' : 'header-no-login'"></div>
+<div sec:authorize="isAuthenticated()">
+    This content is only shown to authenticated users.
+    <div sec:authentication="principal.authorities">
+</div>
+<div sec:authorize="hasRole('[MANAGER]')">
+    This content is only shown to administrators.
+</div>
+<div sec:authorize="hasAnyRole('USER', 'MANAGER')">
+    <table class="table is-striped">
+        <thead>
+        <th>Id</th>
+        <th>Login</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Action</th>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.getId()}"></td>
+            <td th:text="${user.getLogin()}"></td>
+            <td th:text="${user.getFirstName()}"></td>
+            <td th:text="${user.getLastName()}"></td>
+            <td><a>Edit</a></td>
 
+        </tr>
+        </tbody>
+
+
+
+    </table>
+    This content is only shown to users.
+</div>
 </body>
 </html>

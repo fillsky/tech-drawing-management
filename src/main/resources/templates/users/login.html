@@ -1,9 +1,10 @@
+
 <html xmlns:th="http://www.thymeleaf.org">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="/dist/css/bulma.css" rel="stylesheet" type="text/css">
+    <link href="/static/dist/css/bulma.css" th:href="@{/static/dist/css/bulma.css}" rel="stylesheet" type="text/css">
     <title>Log in</title>
 </head>
 <body>
@@ -11,14 +12,18 @@
 
 <div class="level">
     <div class="level-item">
-        <form>
+        <form th:action="@{/login}">
             <label class="label"> Login </label>
-            <input type="text" placeholder="Login" name="login"
+            <input type="text" placeholder="Login" name="username"
                    class="input">
             <label class="label"> Password </label>
-            <input type="password" placeholder="Password" name="password"
+            <input type="password" id="password" placeholder="Password" name="password"
                    class="input password-field">
+            <div class="form-actions">
+            <button type="submit" class="button is-link">Log in</button>
+            </div>
         </form>
+
 
     </div>
 </div>

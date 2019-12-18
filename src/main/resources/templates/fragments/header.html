@@ -25,5 +25,23 @@
         <p class="level-item"><a href="/login" class="button is-success">Log in</a></p>
     </div>
 </nav>
+<nav class="level navbar" th:fragment="header-login">
+    <!-- Left side -->
+    <div class="level-left">
+        <div class="level-item">
+            <img class="image" th:src="@{/dist/img/logo.png}" alt="Logo"/>
+        </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="level-right">
+        <p class="level-item"><a>Drawings</a></p>
+        <p class="level-item"><a>Projects</a></p>
+        <p class="level-item"><a th:href="@{/users}">Users</a></p>
+        <p class="level-item is-small">Logged as:</p>
+        <a class="level-item has-text-weight-semibold" th:text="${#authentication.name}" ></a>
+        <p class="level-item"><a href="/logout" class="button is-warning">Log out</a></p>
+    </div>
+</nav>
 </body>
 </html>

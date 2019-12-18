@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 @Controller
-@RequestMapping("/api/users")
+@RequestMapping("/user")
 public class UserController {
 
     private Map<Long, User> userRepository = new ConcurrentHashMap<>();
@@ -25,6 +25,7 @@ public class UserController {
     @GetMapping
     @ResponseBody
     public List<User> getAllUsers() {
+
         return new ArrayList<>(userRepository.values());
     }
 
