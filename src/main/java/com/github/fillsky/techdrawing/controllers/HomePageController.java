@@ -1,18 +1,15 @@
-package com.github.aleksanderweber.techdrawingmanagement.controllers;
+package com.github.fillsky.techdrawing.controllers;
 
-import com.github.aleksanderweber.techdrawingmanagement.model.data.Role;
-import com.github.aleksanderweber.techdrawingmanagement.model.data.User;
-import com.github.aleksanderweber.techdrawingmanagement.model.repositories.UserRepository;
-import org.springframework.security.core.Authentication;
+import com.github.fillsky.techdrawing.model.data.Role;
+import com.github.fillsky.techdrawing.model.data.User;
+import com.github.fillsky.techdrawing.model.repositories.UserRepository;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import sun.security.provider.PolicyParser;
 
-import java.security.Principal;
 import java.util.List;
 
 @Controller

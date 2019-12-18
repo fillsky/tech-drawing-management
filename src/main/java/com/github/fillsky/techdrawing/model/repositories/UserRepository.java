@@ -1,7 +1,7 @@
-package com.github.aleksanderweber.techdrawingmanagement.model.repositories;
+package com.github.fillsky.techdrawing.model.repositories;
 
-import com.github.aleksanderweber.techdrawingmanagement.model.data.Role;
-import com.github.aleksanderweber.techdrawingmanagement.model.data.User;
+import com.github.fillsky.techdrawing.model.data.Role;
+import com.github.fillsky.techdrawing.model.data.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

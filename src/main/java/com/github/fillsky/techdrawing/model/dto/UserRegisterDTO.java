@@ -1,8 +1,5 @@
-package com.github.aleksanderweber.techdrawingmanagement.model.dto;
+package com.github.fillsky.techdrawing.model.dto;
 
-
-import com.github.aleksanderweber.techdrawingmanagement.model.data.Role;
-import com.github.aleksanderweber.techdrawingmanagement.model.data.User;
 
 public class UserRegisterDTO {
 

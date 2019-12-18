@@ -1,16 +1,14 @@
-package com.github.aleksanderweber.techdrawingmanagement.services;
+package com.github.fillsky.techdrawing.services;
 
-import com.github.aleksanderweber.techdrawingmanagement.model.data.Role;
-import com.github.aleksanderweber.techdrawingmanagement.model.data.User;
-import com.github.aleksanderweber.techdrawingmanagement.model.repositories.UserRepository;
+import com.github.fillsky.techdrawing.model.data.Role;
+import com.github.fillsky.techdrawing.model.data.User;
+import com.github.fillsky.techdrawing.model.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;

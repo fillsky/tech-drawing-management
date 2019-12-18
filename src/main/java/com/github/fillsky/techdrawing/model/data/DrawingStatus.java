@@ -1,4 +1,4 @@
-package com.github.aleksanderweber.techdrawingmanagement.model.data;
+package com.github.fillsky.techdrawing.model.data;
 
 public enum DrawingStatus {
 

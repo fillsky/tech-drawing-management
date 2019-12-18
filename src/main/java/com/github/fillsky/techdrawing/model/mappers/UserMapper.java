@@ -1,8 +1,8 @@
-package com.github.aleksanderweber.techdrawingmanagement.model.mappers;
+package com.github.fillsky.techdrawing.model.mappers;
 
-import com.github.aleksanderweber.techdrawingmanagement.model.data.Role;
-import com.github.aleksanderweber.techdrawingmanagement.model.data.User;
-import com.github.aleksanderweber.techdrawingmanagement.model.dto.UserRegisterDTO;
+import com.github.fillsky.techdrawing.model.data.Role;
+import com.github.fillsky.techdrawing.model.data.User;
+import com.github.fillsky.techdrawing.model.dto.UserRegisterDTO;
 import org.springframework.stereotype.Controller;
 
 @Controller

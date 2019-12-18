@@ -1,10 +1,9 @@
-package com.github.aleksanderweber.techdrawingmanagement.controllers;
+package com.github.fillsky.techdrawing.controllers;
 
-import com.github.aleksanderweber.techdrawingmanagement.model.data.Role;
-import com.github.aleksanderweber.techdrawingmanagement.model.data.User;
-import com.github.aleksanderweber.techdrawingmanagement.model.dto.UserRegisterDTO;
-import com.github.aleksanderweber.techdrawingmanagement.model.mappers.UserMapper;
-import com.github.aleksanderweber.techdrawingmanagement.model.repositories.UserRepository;
+import com.github.fillsky.techdrawing.model.data.User;
+import com.github.fillsky.techdrawing.model.dto.UserRegisterDTO;
+import com.github.fillsky.techdrawing.model.mappers.UserMapper;
+import com.github.fillsky.techdrawing.model.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

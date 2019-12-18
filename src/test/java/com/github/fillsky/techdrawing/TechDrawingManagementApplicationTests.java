@@ -1,4 +1,4 @@
-package com.github.aleksanderweber.techdrawingmanagement;
+package com.github.fillsky.techdrawing;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

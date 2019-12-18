@@ -1,14 +1,13 @@
-package com.github.aleksanderweber.techdrawingmanagement.config;
+package com.github.fillsky.techdrawing.config;
 
-import com.github.aleksanderweber.techdrawingmanagement.model.repositories.UserRepository;
-import com.github.aleksanderweber.techdrawingmanagement.services.UserLoginDetailService;
+import com.github.fillsky.techdrawing.model.repositories.UserRepository;
+import com.github.fillsky.techdrawing.services.UserLoginDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
@@ -46,7 +45,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/user/login")
                 .usernameParameter("username")
                 .passwordParameter("password")
-                .successForwardUrl("/api/users/me")
+                .successForwardUrl("/")
                 .defaultSuccessUrl("/")
                 .permitAll();
     }
