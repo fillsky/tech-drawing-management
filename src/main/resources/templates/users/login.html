@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="/static/dist/css/bulma.css" th:href="@{/static/dist/css/bulma.css}" rel="stylesheet" type="text/css">
+    <link href="/dist/css/bulma.css" th:href="@{/dist/css/bulma.css}" rel="stylesheet" type="text/css">
     <title>Log in</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
 
 <div class="level">
     <div class="level-item">
-        <form th:action="@{/login}">
+        <form th:action="@{/user/login}" method="post">
             <label class="label"> Login </label>
             <input type="text" placeholder="Login" name="username"
                    class="input">

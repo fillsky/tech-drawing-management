@@ -14,11 +14,18 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
-@Service
-@Transactional
+
+
 public class UserLoginDetailService implements UserDetailsService {
-    @Autowired
+
+
     private UserRepository userRepository;
+
+    @Autowired
+    public UserLoginDetailService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     @Override
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
 
